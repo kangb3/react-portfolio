@@ -7,9 +7,9 @@ import './App.css';
 
 
 import Footer from './components/Footer';
-import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
+import Contact from './pages/Contact';
 
 class App extends React.Component {
 
@@ -18,20 +18,21 @@ class App extends React.Component {
     this.state = {
       title: 'Baldeep Kang',
       headerLinks: [
-        {title: 'Home', path: '/'},
-        {title: 'About', path: '/about'},
+        {title: 'About', path: '/'},
         {title: 'Projects', path: '/projects'},
+        {title: 'Contact', path: '/contact'},
 
       ],
-      home: {
-        title: 'My Portfolio',
-        text: 'checkout my projects'
-      },
       about: {
-        title: 'About Me'
+        title: 'About me'
       },
       projects: {
-        title: 'Projects'
+        title: 'My Portfolio',
+        subTitle: "Projects are cool",
+        text: 'checkout my projects'
+      },
+      contact: {
+        title: 'contact'
       }
     }
   }
@@ -48,18 +49,18 @@ class App extends React.Component {
               <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
               <Navbar.Collapse id="navbar-toggle">
                 <Nav className="ml-auto">
-                  <Link className="nav-link" to = "/">Home</Link>
-                  <Link className="nav-link" to = "/About">About</Link>
+                  <Link className="nav-link" to = "/">About</Link>
                   <Link className="nav-link" to = "/Projects">Projects</Link>
+                  <Link className="nav-link" to = "/Contact">Contact</Link>
 
                   
                 </Nav>
               </Navbar.Collapse>
             </Navbar>
 
-            <Route path="/" exact render={() => <Home title ={this.state.home.title} />} subTitle ={this.state.home.subTitle} text={this.state.home.text}/>
-            <Route path="/about" render={() => <About title ={this.state.about.title} />} />
-            <Route path="/projects" exact render={() => <Projects title ={this.state.projects.title} />} />
+            <Route path="/" exact render={() => <About title ={this.state.about.title} />} />
+            <Route path="/projects" render={() => <Projects title ={this.state.projects.title} />} subTitle ={this.state.projects.subTitle} text={this.state.projects.text}/>
+            <Route path="/contact" render={() => <Contact title ={this.state.contact.title} />} />
             <Footer />
         </Container>
       </Router>
