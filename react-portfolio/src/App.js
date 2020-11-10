@@ -6,7 +6,10 @@ import Nav from 'react-bootstrap/Nav';
 import './App.css';
 
 
-import Footer from './components/Footer'
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Projects from './pages/Projects';
 
 class App extends React.Component {
 
@@ -27,7 +30,7 @@ class App extends React.Component {
       about: {
         title: 'About Me'
       },
-      Projects: {
+      projects: {
         title: 'Projects'
       }
     }
@@ -46,11 +49,17 @@ class App extends React.Component {
               <Navbar.Collapse id="navbar-toggle">
                 <Nav className="ml-auto">
                   <Link className="nav-link" to = "/">Home</Link>
-                  <Link className="nav-link" to = "/">About</Link>
-                  <Link className="nav-link" to = "/">Projects</Link>
+                  <Link className="nav-link" to = "/About">About</Link>
+                  <Link className="nav-link" to = "/Projects">Projects</Link>
+
+                  
                 </Nav>
               </Navbar.Collapse>
             </Navbar>
+
+            <Route path="/" exact render={() => <Home title ={this.state.home.title} />} subTitle ={this.state.home.subTitle} text={this.state.home.text}/>
+            <Route path="/about" render={() => <About title ={this.state.about.title} />} />
+            <Route path="/projects" exact render={() => <Projects title ={this.state.projects.title} />} />
             <Footer />
         </Container>
       </Router>
