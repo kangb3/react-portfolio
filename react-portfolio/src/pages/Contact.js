@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Home(props){
+function Contact(props){
 
     return(
         <p>Contact</p>
@@ -8,4 +8,4 @@ function Home(props){
 
 }
 
-export default Home;
+export default Contact;
