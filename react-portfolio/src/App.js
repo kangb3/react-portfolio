@@ -28,7 +28,7 @@ class App extends React.Component {
       },
       projects: {
         title: 'My Portfolio',
-        subTitle: "Projects are cool",
+        subTitle: 'Projects are cool',
         text: 'checkout my projects'
       },
       contact: {
@@ -59,7 +59,7 @@ class App extends React.Component {
             </Navbar>
 
             <Route path="/" exact render={() => <About title ={this.state.about.title} />} />
-            <Route path="/projects" render={() => <Projects title ={this.state.projects.title} />} subTitle ={this.state.projects.subTitle} text={this.state.projects.text}/>
+            <Route path="/projects" render={() => <Projects title={this.state.projects.title} />} subTitle ={this.state.projects.subTitle} text={this.state.projects.text}/>
             <Route path="/contact" render={() => <Contact title ={this.state.contact.title} />} />
             <Footer />
         </Container>
