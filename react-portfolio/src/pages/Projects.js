@@ -1,10 +1,12 @@
 import React from 'react';
+import Jumbo from '../components/Jumbo';
 
 function Project(props){
+    //console.log(props)
 
     return(
-        <p>Project</p>
-    )
+        <Jumbo title={props.title} />
+    );
 
 }
 
