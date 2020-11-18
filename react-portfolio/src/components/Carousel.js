@@ -2,6 +2,9 @@ import React from 'react';
 import TrilogyApp from '../assets/images/TrilogyApp.png';
 import PasswordGenerator from '../assets/images/PasswordGenerator.png';
 import DayPlanner from '../assets/images/DayPlanner.png';
+import ReadmeGenerator from '../assets/images/ReadmeGenerator.png';
+import WeatherDashboard from '../assets/images/WeatherDashboard.png';
+import JobFinder from '../assets/images/JobFinder.png'
 import Card from '../components/Card'
 import Container from 'react-bootstrap/esm/Container';
 //import Container from 'react-bootstrap/Container';
@@ -39,6 +42,24 @@ class Carousel extends React.Component{
                     imgSrc: DayPlanner,
                     link: 'https://kangb3.github.io/Day-Planner-App/',
                     repoLink: 'https://github.com/kangb3/Day-Planner-App/',
+                    selected: false
+                },
+                {
+                    id: 3,
+                    title: 'Weather Dashboard',
+                    subTitle: 'Display the current weather condition and five day forcast of specific city that a user searched for. The Weather Dashboard utilizes HTML, CSS, JavaScript, and jQuery and Open Weather API to retrieve and display weather information in the browser to a user.',
+                    imgSrc: WeatherDashboard,
+                    link: 'https://kangb3.github.io/Weather-Dashboard/',
+                    repoLink: 'https://github.com/kangb3/Weather-Dashboard',
+                    selected: false
+                },
+                {
+                    id: 4,
+                    title: 'JobFinder',
+                    subTitle: 'Application to help people find tech jobs. Built using Javascript, Handlebars, Sequelize, Node and Express.',
+                    imgSrc: JobFinder,
+                    link: 'https://uw-jobfinder.herokuapp.com/',
+                    repoLink: 'https://github.com/kangb3/JobFinder',
                     selected: false
                 },
             ]
